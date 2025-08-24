@@ -1,3 +1,4 @@
+// src/services/openLibraryApi.js
 
 const BASE_URL = "https://openlibrary.org";
 
@@ -14,7 +15,7 @@ export async function searchBooks(query) {
     throw error;
   }
 }
- 
+
 export async function getBookDetails(olid) {
   try {
     const response = await fetch(`${BASE_URL}/works/${olid}.json`);

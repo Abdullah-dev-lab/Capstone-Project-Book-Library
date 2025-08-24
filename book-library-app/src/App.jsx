@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails";
 import ErrorMessage from "./components/ErrorMessage";
+import Loader from "./components/Loader";
 import { searchBooks, getBookDetails } from "./services/openLibraryApi";
 
 function App() {
@@ -46,13 +46,14 @@ function App() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-4">
-         Book Library
+  <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+     <div className="max-w-6xl mx-auto p-4">
+        <h1 className="text-3xl font-bold text-center mb-4 text-white">
+        📚 Book Library
       </h1>
       <SearchBar onSearch={handleSearch} />
 
-      {loading && <p className="text-center">Loading...</p>}
+      {loading && <Loader />}
       {error && <ErrorMessage message={error} />}
 
       {!loading && !selectedBook && books.length > 0 && (
@@ -60,9 +61,9 @@ function App() {
       )}
 
       {!loading && selectedBook && <BookDetails book={selectedBook} />}
-    </div>
+     </div>
+  </div>
   );
 }
-
 
 export default App;

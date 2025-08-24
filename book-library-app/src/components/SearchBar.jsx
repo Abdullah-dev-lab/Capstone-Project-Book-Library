@@ -1,3 +1,4 @@
+// src/components/SearchBar.jsx
 import { useState } from "react";
 
 function SearchBar({ onSearch }) {
@@ -28,6 +29,5 @@ function SearchBar({ onSearch }) {
     </form>
   );
 }
-
 
 export default SearchBar;
