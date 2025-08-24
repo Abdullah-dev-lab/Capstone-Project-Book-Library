@@ -1,4 +1,3 @@
-// src/components/BookCard.jsx
 function BookCard({ book, onSelect }) {
   const coverUrl = book.cover_i
     ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
@@ -7,7 +6,7 @@ function BookCard({ book, onSelect }) {
   return (
     <div
       onClick={() => onSelect(book)}
-      className="bg-white dark:bg-gray-800 cursor-pointer p-4 border rounded-lg shadow hover:shadow-lg transition"
+      className="cursor-pointer p-4 border rounded-lg shadow hover:shadow-lg transition"
     >
       <img
         src={coverUrl}

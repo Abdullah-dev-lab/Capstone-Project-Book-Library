@@ -1,5 +1,3 @@
-// src/services/openLibraryApi.js
-
 const BASE_URL = "https://openlibrary.org";
 
 export async function searchBooks(query) {

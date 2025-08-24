@@ -1,4 +1,3 @@
-// src/components/BookList.jsx
 import BookCard from "./BookCard";
 
 function BookList({ books, onSelect }) {
