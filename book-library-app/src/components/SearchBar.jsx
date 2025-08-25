@@ -17,7 +17,9 @@ function SearchBar({ onSearch }) {
         placeholder="Search for books..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-grow p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex-grow p-2 rounded-lg 
+                   bg-white text-gray-900 placeholder-gray-500 
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <button
         type="submit"
